@@ -41,9 +41,10 @@ function drawGraph(graphList, maxValue) {
 function addBars(graphList, maxValue) {
   const histogram = graphList.reduce((acc, item) => {
     let height = (item.value / maxValue) * 100;
+    let width = 100/(max-min);
     return (
       acc +
-      `<li class="histogramItem" style="height: calc(${height}% + 1px);" />`
+      `<li class="histogramItem" style="height: calc(${height}% + 1px); width: ${width}%;" />`
     );
   }, ``);
 
@@ -62,8 +63,9 @@ function addYAxis(maxValue) {
 
 function addXAxis() {
   let xInner = "";
+  let width = 100/(max-min);
   for (i = min; i <= max; i++) {
-    xInner += `<span>${i}</span>`;
+    xInner += `<span style="width:${width}%">${i}</span>`;
   }
 
   document.getElementById("keys").innerHTML = xInner;

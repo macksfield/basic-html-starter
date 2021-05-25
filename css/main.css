@@ -1,43 +1,59 @@
-#histogram {
-    width: 100%;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
+#histogram {
+  width: 100%;
+  display: flex;
+}
+
 #bars {
-    height: 300px;
-    margin: 0;
-    padding: 0;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 .histogramItem {
-    background-color: red;
-    width: 28px;
-    display: inline-block;
-    border: 1px solid black;
+  background-color: red;
+  width: 28px;
+  border: 1px solid black;
 }
 #keys {
-    font-size: 0;
+  display: flex;
 }
 #keys > span {
-    width: 30px;
-    display: inline-block;
-    text-align: center;
-    font-size:15px;
-    padding-top: 5px;
+  width: 30px;
+  text-align: center;
+  padding-top: 5px;
 }
 #counts {
-    height: 300px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
 }
 
 .countItem {
-    width: 28px;
-    text-align: center;
+  width: 28px;
+  text-align: center;
 }
 
+#left {
+  width: 30px;
+}
 
-#left, #right {
-    display: inline-block;
-    vertical-align: top;
+#right {
+  width: calc(100% - 30px);
+}
+
+#left,
+#right {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
 }
