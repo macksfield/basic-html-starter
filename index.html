@@ -1,18 +1,36 @@
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
-        <title>Starter Template</title>
+        <title>Histogram</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 		
-		<script src="js/javascript.js"></script>
 
     </head>
     <body>
-		<h1>Good Luck!</h1>
+		<h1>Histogram Generator</h1>
+    <h4>Refresh for new random values from: https://www.random.org/</h4>
+
+    <div id="histogram">
+      <div id="left">
+        <ul id="counts">
+        </ul>
+      </div>
+      <div id="right">
+        <ul id="bars">
+        </ul>
+        <div id="keys">
+        </div>
+      </div>
+    </div>
+    <div>
+      <h5>Raw Data:</h5>
+      <div id='raw'></div>
+    </div>
+		<script src="js/javascript.js"></script>
 
     </body>
 </html>
