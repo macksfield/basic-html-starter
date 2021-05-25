@@ -1,6 +1,6 @@
 const number = 500;
-const min = 10;
-const max = 40;
+const min = 1;
+const max = 30;
 const counter = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 
 fetch(
