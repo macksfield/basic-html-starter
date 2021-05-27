@@ -1,9 +1,9 @@
 const counter = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 
 getData = (quantity, min, max) => {
-  quantity = parseInt(quantity, 10);
-  min = parseInt(min, 10);
-  max = parseInt(max, 10);
+  quantity = parseInt(quantity);
+  min = parseInt(min);
+  max = parseInt(max);
 
   fetch(
     "https://www.random.org/integers/?num=" +
