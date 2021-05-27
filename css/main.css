@@ -6,42 +6,55 @@ ul {
 
 form {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 10px;
 }
+
+form > div {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
 label {
   display: flex;
   align-items: center;
+  width: 80px;
 }
-input {
-  margin-right: 5px;
-}
+
 #histogram {
   width: 100%;
   display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 #bars {
-  height: 300px;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  align-items: end;
 }
+
 .histogramItem {
   background-color: red;
   width: 28px;
   border: 1px solid black;
+  min-width: 28px;
 }
+
 #keys {
+  font-size: 11px;
   display: flex;
-  font-size: 10px;
 }
+
 #keys > span {
   width: 30px;
   text-align: center;
   padding-top: 5px;
+  min-width: 30px;
 }
 #counts {
-  height: 300px;
+  /* height: 300px; */
   margin: 0;
   padding: 0;
   display: flex;
@@ -61,6 +74,8 @@ input {
 
 #right {
   width: calc(100% - 30px);
+  /* overflow-x: auto;
+  white-space: nowrap; */
 }
 
 #left,

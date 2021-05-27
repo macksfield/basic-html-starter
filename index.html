@@ -18,9 +18,9 @@
     </div>
     <h4>Refresh or hit submit for new random values from: <a href="https://www.random.org/">https://www.random.org</a></h4>
     <form onSubmit="return false;">
-      <label for="dc">Data Count:</label><input type="number" id="dc" name="dc" value="500"><br>
-      <label for="min">Min Value:</label><input type="number" id="min" name="min" value="1" min="document.forms[0].max.value - 100" max="document.forms[0].min.value + 100"><br>
-      <label for="max">Max Value:</label><input type="number" id="max" name="max" value="30"><br>
+      <div><label for="dc">Quantity:</label><input type="number" id="quantity" name="dc" value="500"></div>
+      <div><label for="min">Min Value:</label><input type="number" id="min" name="min" value="1"></div>
+      <div><label for="max">Max Value:</label><input type="number" id="max" name="max" value="30"></div>
       <input type="submit" value="Submit" onclick="getData(document.forms[0].dc.value, document.forms[0].min.value, document.forms[0].max.value)">
     </form>
 
